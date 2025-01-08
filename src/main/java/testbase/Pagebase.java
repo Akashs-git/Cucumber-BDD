@@ -130,8 +130,9 @@ public class Pagebase {
         webBrowser = browser.toLowerCase();
         switch (webBrowser) {
             case "chrome":
+            //    System.out.println("After launch site checkking the driver");
                 chromeDriverPath = getAppProperty("ChromeDriverPath");
-                System.out.println(chromeDriverPath);
+            //    System.out.println(chromeDriverPath);
                 System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 
                 ChromeOptions options = new ChromeOptions();
@@ -150,7 +151,7 @@ public class Pagebase {
     public String getAppProperty(String key) {
         String value = "";
         try {
-            FileInputStream fileInputStream = new FileInputStream("C:\\Users\\akash\\Intellij Idea\\Myntra\\target\\data.properties");
+            FileInputStream fileInputStream = new FileInputStream("C:\\Users\\akash\\Intellij Idea\\Myntra\\data.properties");
             Properties property = new Properties();
             property.load(fileInputStream);
             value = property.getProperty(key);
@@ -182,9 +183,9 @@ public class Pagebase {
                     WebDriverWait wait = new WebDriverWait(remoteDriver, Duration.ofSeconds(30));
                     wait.until(ExpectedConditions.visibilityOf(e));
                     wait.until(ExpectedConditions.elementToBeClickable(e));
-                    System.out.println("Element identified");
+                //    System.out.println("Element identified");
                     e.click();
-                    System.out.println("Element click");
+                //    System.out.println("Element click");
                     break;
             }
         } catch (Exception ex) {

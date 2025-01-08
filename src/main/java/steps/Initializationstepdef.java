@@ -69,7 +69,7 @@ public class Initializationstepdef extends Testbase1 {
         if(!execution_Parameters.isEmpty()){
           toolName =  execution_Parameters.get("ToolName");
           if(toolName.equalsIgnoreCase("Selenium")){
-              System.out.println("Driver start initiatedriverWeb");
+              System.out.println("Driver start initiate driverWeb");
               initiateDriverWeb(toolName,execution_Parameters.get("Browser"));
 
           }
@@ -99,15 +99,15 @@ public class Initializationstepdef extends Testbase1 {
 
 
 
-    @After
-    public void driverStop(Scenario scenario){
-        if (!SkippedScenario){
-            if(getPropertyValue("UPDATE_TO_JIRA").equalsIgnoreCase("Y")){
-             //   String testLogFile = getScreenShotFileLocation();
-             //   updateExecutionStatusToJira(Scenario, testLogFile);
-            }
-            closeDriver(toolName);
-        }
-    }
+//    @After
+//    public void driverStop(Scenario scenario){
+//        if (!SkippedScenario){
+//            if(getPropertyValue("UPDATE_TO_JIRA").equalsIgnoreCase("Y")){
+//             //   String testLogFile = getScreenShotFileLocation();
+//             //   updateExecutionStatusToJira(Scenario, testLogFile);
+//            }
+//            closeDriver(toolName);
+//        }
+//    }
 
 }

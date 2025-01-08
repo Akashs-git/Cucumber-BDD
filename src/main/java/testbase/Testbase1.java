@@ -33,8 +33,8 @@ public class Testbase1 {
 
     public HashMap<String,String> getExecution_Parameters(String featureName){
         try{
-         //   FileInputStream fis = new FileInputStream("C:\\Users\\akash\\Intellij Idea\\Myntra\\target\\TestRunnerBDD.xlsx");
-            FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\target\\TestRunnerBDD.xlsx");
+         //   FileInputStream fis = new FileInputStream("C:\Users\akash\Intellij Idea\Myntra\TestRunnerBDD.xlsx");
+            FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\TestRunnerBDD.xlsx");
 
             XSSFWorkbook wb = new XSSFWorkbook(fis);
             XSSFSheet sh = wb.getSheet("Features");
@@ -81,7 +81,7 @@ public class Testbase1 {
     public String getPropertyValue(String key) {
         String value = "";
         try {
-            FileInputStream fileInputStream = new FileInputStream("C:\\Users\\akash\\Intellij Idea\\Myntra\\target\\data.properties");
+            FileInputStream fileInputStream = new FileInputStream("C:\\Users\\akash\\Intellij Idea\\Myntra\\data.properties");
             Properties property = new Properties();
             property.load(fileInputStream);
             value = property.getProperty(key);
@@ -96,7 +96,7 @@ public class Testbase1 {
         ArrayList<String> listOfTags = new ArrayList<String>();
         try {
             FileInputStream fis;
-            fis = new FileInputStream("C:\\Users\\akash\\Intellij Idea\\Myntra\\target\\TestRunnerBDD.xlsx");
+            fis = new FileInputStream("C:\\Users\\akash\\Intellij Idea\\Myntra\\TestRunnerBDD.xlsx");
             XSSFWorkbook wb = new XSSFWorkbook(fis);
             XSSFSheet sheet = wb.getSheet("Tags");
 

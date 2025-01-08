@@ -19,14 +19,16 @@ public class Readdatesheet {
     public String getValue(String classname, String ColHeader, String Sheetname) throws IOException {
         try {
 
-            FileInputStream F = new FileInputStream("C:\\Users\\akash\\Intellij Idea\\Myntra\\target\\data.xlsx");
+            FileInputStream F = new FileInputStream("C:\\Users\\akash\\Intellij Idea\\Myntra\\Data.xlsx");
             wb = new XSSFWorkbook(F);
             ws = wb.getSheet(Sheetname);
-
+         //   System.out.println("Reached excell");
+         //   System.out.println(classname);
+         //   System.out.println(ColHeader);
             int rowNumber= getRownumber(classname,ColHeader);
-        //   System.out.println(rowNumber);
+         //   System.out.println(rowNumber);
             int columnnumber = getColNumber(ColHeader);
-        //    System.out.println(columnnumber);
+         //   System.out.println(columnnumber);
             XSSFCell cell =ws.getRow(rowNumber).getCell(columnnumber);
             if(cell != null) {
                 value=cell.toString();
