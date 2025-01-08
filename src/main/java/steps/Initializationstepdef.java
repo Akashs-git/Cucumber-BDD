@@ -99,15 +99,15 @@ public class Initializationstepdef extends Testbase1 {
 
 
 
-//    @After
-//    public void driverStop(Scenario scenario){
-//        if (!SkippedScenario){
-//            if(getPropertyValue("UPDATE_TO_JIRA").equalsIgnoreCase("Y")){
-//             //   String testLogFile = getScreenShotFileLocation();
-//             //   updateExecutionStatusToJira(Scenario, testLogFile);
-//            }
-//            closeDriver(toolName);
-//        }
-//    }
+    @After
+    public void driverStop(Scenario scenario){
+        if (!SkippedScenario){
+            if(getPropertyValue("UPDATE_TO_JIRA").equalsIgnoreCase("Y")){
+             //   String testLogFile = getScreenShotFileLocation();
+             //   updateExecutionStatusToJira(Scenario, testLogFile);
+            }
+            closeDriver(toolName);
+        }
+    }
 
 }
